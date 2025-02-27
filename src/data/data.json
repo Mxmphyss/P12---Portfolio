@@ -1,0 +1,46 @@
+{
+    "presentation": {
+      "title": "MON PORTFOLIO D'INTÉGRATEUR WEB",
+      "description": "Je suis un développeur spécialisé en React"
+    },
+    "technologies": [
+      { "name": "React", "image": "/assets/image/React-icon.svg.png", "description": "Bibliothèque JavaScript pour interfaces utilisateur." },
+      { "name": "Redux", "image": "/assets/image/logo-redux.webp", "description": "Gestion d'état prévisible pour JavaScript apps." },
+      { "name": "SCSS", "image": "/assets/image/Sass_Logo_Color.svg.png", "description": "Préprocesseur CSS puissant et flexible." },
+      { "name": "Html 5", "image": "/assets/image/HTML5_logo_and_wordmark.svg.png", "description": "Environnement d'exécution JavaScript côté serveur." },
+      { "name": "CSS 3", "image": "/assets/image/CSS3_logo_and_wordmark.svg.png", "description": "Base de données NoSQL orientée document." },
+      { "name": "Javascript", "image": "/assets/image/Javascript-736400_960_720.png", "description": "Framework web minimaliste pour Node.js."  },
+      { "name": "Git et Github", "image": "/assets/image/git-vs-github.webp", "description": "Système de contrôle de version distribué / Plateforme de développement collaboratif." },
+      { "name": "Swagger", "image": "/assets/image/Swagger-logo.png", "description": "langage de description d'interface d'API afin de créer, documenter et utiliser des services Web." }
+    
+    ],
+    "projects": [
+      {
+        "name": "Projet 1",
+        "description": "Un site d'hôtel de vacances codé avec HTML et CSS.",
+        "image": {
+          "icon": "/assets/maquettes/booki-icon.png",
+          "desktop": "/assets/maquettes/booki-desktop.png"
+        },
+        "link": "https://github.com/user/projet1"
+      },
+      {
+        "name": "Projet 2",
+        "description": "Un site de menus de restauration gastronomique codé avec HTML, CSS et des animations CSS.",
+        "image": {
+          "icon": "/assets/maquettes/omf-icon.png",
+          "desktop": "/assets/maquettes/omf-desktop.png"
+        },
+        "link": "https://github.com/user/projet2"
+      },
+      {
+        "name": "Projet 3",
+        "description": "Une application web de location immobilière codée avec HTML, CSS et React.",
+        "image": {
+          "icon": "/assets/maquettes/kasa-icon.png",
+          "desktop": "/assets/maquettes/kasa-desktop.png"
+        },
+        "link": "https://github.com/user/projet3"
+      }
+    ]
+  }

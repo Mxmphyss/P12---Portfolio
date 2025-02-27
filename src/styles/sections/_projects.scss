@@ -1,0 +1,123 @@
+@import "../placeholders/placeholders";
+@import "../base/variables";
+
+.projects {
+  @extend %flex-center;
+  @extend %flex-column;
+  text-align: center;
+  padding: 50px 0;
+  height: 90%;
+
+  h2 {
+    font-size: 2rem;
+    color: #007bff;
+  }
+
+  .project-slider {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+  }
+
+  .project-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .project-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+
+    .project-icon {
+      width: 100px;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+
+  .project-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .nav-button {
+    position: absolute;
+    $primary-color: #007bff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+
+    .chevron {
+      font-size: 50px;
+    }
+
+    &:hover {
+      background: grey;
+    }
+
+    &.left {
+      left: 100px;
+    }
+
+    &.right {
+      right: 100px;
+    }
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 90%;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .modal-icon {
+      width: 80px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}

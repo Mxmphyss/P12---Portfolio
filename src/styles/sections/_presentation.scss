@@ -1,0 +1,21 @@
+.presentation {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #f8f9fa;
+  color: #333;
+  
+  .presentation-content {
+    h1 {
+      font-size: 2.5rem;
+      color: #007bff;
+      font-weight: bold;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+  }
+}

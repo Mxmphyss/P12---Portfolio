@@ -1,0 +1,23 @@
+// Base (Variables et styles globaux)
+@import "./base/variables";
+@import "./base/global";
+
+// Mixins
+@import "./mixins/mixins";
+
+// Placeholders
+@import "./placeholders/placeholders";
+
+// Composants
+@import "./containers/footer";
+@import "./containers/header";
+@import "./containers/modal";
+
+// Sections
+@import "./sections/presentation";
+@import "./sections/technologies";
+@import "./sections/projects";
+@import "./sections/contacts";
+
+// Pages
+@import "./pages/home";

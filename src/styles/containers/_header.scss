@@ -1,0 +1,77 @@
+@import "../placeholders/placeholders";
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  padding: 0 150px;
+  background: black;
+  z-index: 1000;
+}
+
+.title{
+  @extend %custom-font;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.navbar {
+  z-index: 1000;
+  display: flex;
+  background-color: black;
+
+  ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    position: relative;
+    transition: opacity 0.3s ease;
+
+    .indicator {
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      opacity: 1;
+      transition: opacity 0.3s ease, left 0.3s ease;
+    }
+
+    &.active .indicator {
+      left: -15px;
+    }
+
+    &:not(.active) .indicator {
+      opacity: 0;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #ff9800;
+      }
+    }
+  }
+}
