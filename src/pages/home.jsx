@@ -3,12 +3,17 @@ import Presentation from "../components/sections/presentation";
 import Technologies from "../components/sections/technologie";
 import Projects from "../components/sections/projects";
 import Contact from "../components/sections/contacts";
+import AboutMe from "../components/sections/aboutMe";
 
 const Home = () => {
   return (
     <main>
       <section id="presentation" className="mainSection">
         <Presentation />
+      </section>
+
+      <section id="aboutMe" className="mainSection">
+        <AboutMe />
       </section>
 
       <section id="technologies" className="mainSection">

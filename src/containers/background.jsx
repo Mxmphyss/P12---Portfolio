@@ -1,26 +1,38 @@
 import React, { useEffect, useState } from "react";
-import "../styles/base/_global.scss";
+import { motion } from "framer-motion";
+import { Parallax } from "react-scroll-parallax";
 
 const Background = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [mouseX, setMouseX] = useState(0);
+  const [mouseY, setMouseY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const position = window.scrollY;
-      setScrollPosition(position);
-
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const percentage = position / maxScroll;
-
-      const hue = Math.round(percentage * 360); // Variation de couleur (0° à 360°)
-      document.documentElement.style.setProperty("--bg-color", `hsl(${hue}, 80%, 20%)`);
+    const handleMouseMove = (e) => {
+      setMouseX(e.clientX / window.innerWidth - 0.5);
+      setMouseY(e.clientY / window.innerHeight - 0.5);
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  return <div className="background-overlay"></div>;
+  return (
+    <div className="background">
+      <motion.div 
+        className="stars"
+        animate={{ opacity: [0, 1], y: [-10, 10] }}
+        transition={{ duration: 3, repeat: Infinity, repeatType: "mirror" }}
+      />
+
+      <motion.div
+        className="nebula"
+        style={{
+          transform: `translate(${mouseX * 50}px, ${mouseY * 50}px)`,
+        }}
+      />
+      
+      <Parallax className="transition-overlay" speed={-10} />
+    </div>
+  );
 };
 
 export default Background;

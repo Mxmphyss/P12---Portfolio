@@ -1,4 +1,5 @@
 @import "../placeholders/placeholders";
+@import "../base/variables";
 
 header {
   display: flex;
@@ -10,7 +11,7 @@ header {
   height: 70px;
   width: 100%;
   padding: 0 150px;
-  background: black;
+  background: $third-color;
   z-index: 1000;
 }
 
@@ -30,48 +31,38 @@ header {
 
   ul {
     display: flex;
-    gap: 20px;
+    @extend %flex-center;
+    gap: 40px;
     list-style: none;
     padding: 0;
     margin: 0;
-  }
 
-  li {
-    position: relative;
-    transition: opacity 0.3s ease;
-
-    .indicator {
-      position: absolute;
-      left: -10px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 6px;
-      height: 6px;
-      background: white;
-      border-radius: 50%;
-      opacity: 1;
-      transition: opacity 0.3s ease, left 0.3s ease;
-    }
-
-    &.active .indicator {
-      left: -15px;
-    }
-
-    &:not(.active) .indicator {
-      opacity: 0;
+    .user {
+      color: white;
+      border: none;
     }
 
     a {
       color: white;
+      border: 2px solid white;
+      position: relative;
+      transition: opacity 0.3s ease;
+      border-radius: 25px;
+      padding: 10px;
+      cursor: pointer;
       text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      transition: color 0.3s;
+
+      li {
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s;
+      }
 
       &:hover {
-        color: #ff9800;
+        background-color: $primary-color;
       }
     }
+
   }
 }

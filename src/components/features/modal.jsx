@@ -1,7 +1,7 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
+import React from "react";
 import "../../styles/containers/_modal.scss";
 
 const Modal = ({ item, onClose, onNext, onPrev }) => {
@@ -27,9 +27,12 @@ const Modal = ({ item, onClose, onNext, onPrev }) => {
         </button>
         <div className="modal-body">
           <div className="modal-header">
-            <img src={item.image.icon} alt={item.name} className="modal-icon"/>
+          <img
+            src={typeof item.image === "string" ? item.image : item.image.icon}
+            alt={item.name}
+            className="modal-icon"
+          />
           </div>
-          <img src={item.image.desktop} alt={item.name} className="modal-image" />
           <h2>{item.name}</h2>
           <p>{item.description}</p>
           {item.link && (

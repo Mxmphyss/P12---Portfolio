@@ -11,7 +11,7 @@ const Presentation = () => {
         transition={{ duration: 1 }}
       >
         <h1>Bienvenue sur mon Portfolio</h1>
-        <p>Développeur passionné spécialisé en React, Redux et SCSS.</p>
+        <p>Développeur passionné spécialisé en React</p>
       </motion.div>
     </section>
   );
