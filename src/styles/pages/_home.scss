@@ -3,14 +3,10 @@
 .mainSection {
   @extend %flex-center;
   @extend %flex-column;
-  background-color: $secondary-color;
-  color: #333;
   margin: 25px;
-  padding: 25px;
   border-radius: 10px;
 
   h2 {
     margin: 20px;
-    color: #007bff;
   }
 }

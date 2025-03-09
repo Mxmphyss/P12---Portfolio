@@ -1,9 +1,8 @@
 .footer {
-  position: fixed;
-  bottom: 0;
+  z-index: 10;
   left: 0;
   width: 100%;
-  background: #333;
+  background-color: $five-color;
   color: white;
   text-align: center;
   padding: 15px;

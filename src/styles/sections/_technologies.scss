@@ -1,8 +1,32 @@
 .technologies {
-    height: 80%;
-    padding: 80px 20px;
-    text-align: center;
-    
+  background: linear-gradient(45deg, 
+    $deep-space-blue,
+    $midnight-blue,
+    $galaxy-blue,
+    $nebula-blue,
+    $starlight-blue,
+    $cosmic-light,
+    $icy-blue,
+    $white-blue
+  );
+  padding: 80px 20px;
+  text-align: center;
+  border: 2px solid $white-blue;
+  border-radius: 10px;
+  background-size: 300% 300%;
+  animation: gradient-animation 10s infinite alternate;
+
+  @keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+
+  h2 {
+    color: $moonlight-blue;
+    -webkit-text-stroke: 0.1px $icy-blue;
+  }
     .tech-list {
       display: flex;
       justify-content: center;

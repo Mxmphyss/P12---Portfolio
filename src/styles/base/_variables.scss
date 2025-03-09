@@ -1,6 +1,42 @@
-// Couleurs
-$primary-color: #5D3FD3;
-$secondary-color: #F0F8FF;
-$third-color: #0a0a0a;
-$fourth-color: #003366;
+// Variables SCSS pour les couleurs principales
+
+$primary-color: #0b3d91;   // Bleu spatial
+$secondary-color: #090a0f;  // Noir spatial profond
+$third-color: #ffd700;  // Jaune étoilé (inspiré des étoiles)
+$fourth-color: #ffffff;        // Blanc pur
+$five-color: #333;
+
+$color-nebula-purple: #5d2e8c; // Violet nébuleuse
+$color-nebula-pink: #ff6ec7;  // Rose cosmique
+
 $text-color: #333;
+
+// Couleurs principales pour du ROSE
+
+$red-pink: #ff3366;  // Rouge tirant vers le rose
+$pink-white: #ffccdd; // Rose pastel proche du blanc
+$soft-red: #ff6b6b;  // Rouge adouci
+$deep-pink: #d81b60; // Rose foncé
+$white-rose: #fff0f5; // Blanc avec une teinte rosée (Lavender Blush)
+$dark-rose: #b3003c; // Rose très foncé
+$light-red-pink: #ff99aa; // Rose clair avec une teinte rouge
+$warm-white: #fff5f7; // Blanc légèrement chaud avec une nuance rosée
+
+// Couleurs principales pour du BLEU
+$deep-space-blue: #0a0f2c;  // Bleu spatial très foncé, presque noir
+$midnight-blue: #0d1b3d;    // Bleu nuit profond
+$galaxy-blue: #102a66;      // Bleu galaxie intense
+$nebula-blue: #1a3a80;      // Bleu nébuleuse riche et profond
+$starlight-blue: #2472c8;   // Bleu éclatant, proche des étoiles
+$cosmic-light: #62a7ff;     // Bleu clair cosmique
+$icy-blue: #a8d0ff;         // Bleu glacial, proche des étoiles froides
+$white-blue: #e6f2ff;       // Blanc bleuté, lumineux comme un reflet d’étoile
+
+// Couleurs de variation
+$dark-void: #070a1c;        // Bleu noir absolu, fond d’espace profond
+$purple-blue: #2e1a47;      // Bleu avec une touche violette, style nébuleuse
+$electric-blue: #0077ff;    // Bleu électrique vibrant, proche des éclairs cosmiques
+$fading-blue: #395a9d;      // Bleu en dégradé vers le blanc spatial
+$glow-blue: #9bdcff;        // Bleu lumineux, effet de lueur cosmique
+$moonlight-blue: #c4e5ff;   // Bleu pâle lunaire
+

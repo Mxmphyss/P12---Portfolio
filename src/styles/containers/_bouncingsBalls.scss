@@ -1,0 +1,35 @@
+.bouncing-balls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px;
+  
+    .ball {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      animation: bounce 2s infinite ease-in-out;
+  
+      &.falling {
+        animation: fall 0.8s ease-in-out forwards;
+      }
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

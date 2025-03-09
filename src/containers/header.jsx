@@ -12,16 +12,16 @@ const Header = () => {
       <nav className="navbar">
         <ul>
           <li className="user">
-            <a href="#presentation">
+            <a href="#aboutMe">
               <FontAwesomeIcon icon={faCircleUser} />
             </a>
           </li>
           {sections.map((section) => (
-            <a href={`#${section}`}>
               <li key={section}>
-                {section.toUpperCase()}
+                <a href={`#${section}`}>
+                  {section.toUpperCase()}
+                </a>
               </li>
-            </a>
           ))}
         </ul>
       </nav>

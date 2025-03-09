@@ -14,6 +14,47 @@ const aboutMe = () => {
           <h2>À propos de moi</h2>
         </div>
         <div className="containerAboutMe">
+          <div className="firstContentAboutMe">
+            <div className="aboutMeContent">
+              <div className="aboutMeSkills">
+                <div className="aboutMeIcon">
+                  <FontAwesomeIcon icon={faGears} alt="curiosité" />
+                  <p>Curiosité</p>
+                </div>
+                <div className="aboutMeIcon">
+                  <FontAwesomeIcon icon={faArrowsAlt} alt="adaptabilité" />
+                  <p>Adaptabilité</p>
+                </div>
+                <div className="aboutMeIcon">
+                  <FontAwesomeIcon icon={faPeopleGroup} alt="esprit d'équipe" />
+                  <p>Esprit d'équipe</p>
+                </div>
+                <div className="aboutMeIcon">
+                  <FontAwesomeIcon icon={faUserCog} alt="autonomie" />
+                  <p>Autonomie</p>
+                </div>
+                <div className="aboutMeIcon">
+                  <FontAwesomeIcon icon={faBolt} alt="rigueur" />
+                  <p>Rigueur</p>
+                </div>
+              </div>
+              <div className="aboutMeText">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Tempore debitis natus quos cumque perferendis dolorem, 
+                  at beatae dolore corrupti ipsam dolor omnis dolorum dicta similique fugit? 
+                  Corrupti exercitationem totam architecto.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Tempore debitis natus quos cumque perferendis dolorem, 
+                  at beatae dolore corrupti ipsam dolor omnis dolorum dicta similique fugit? 
+                  Corrupti exercitationem totam architecto.
+                </p>
+              </div>
+            </div>
+            <div className="wallpaperImg">
+              <img src="./assets/image/wallpaper/white-rose-blue.png" alt="wallpaper" />
+            </div>
+          </div>
           <div className="aboutMeLinks">
               <div className="forLink">
                   <button>
@@ -25,42 +66,6 @@ const aboutMe = () => {
                       <p>Certification</p>
                   </button>
               </div>
-          </div>
-          <div className="aboutMeContent">
-            <div className="aboutMeImages">
-              <div className="aboutMeIcon">
-                <FontAwesomeIcon icon={faGears} alt="curiosité" />
-                <p>Curiosité</p>
-              </div>
-              <div className="aboutMeIcon">
-                <FontAwesomeIcon icon={faArrowsAlt} alt="adaptabilité" />
-                <p>Adaptabilité</p>
-              </div>
-              <div className="aboutMeIcon">
-                <FontAwesomeIcon icon={faPeopleGroup} alt="esprit d'équipe" />
-                <p>Esprit d'équipe</p>
-              </div>
-              <div className="aboutMeIcon">
-                <FontAwesomeIcon icon={faUserCog} alt="autonomie" />
-                <p>Autonomie</p>
-              </div>
-              <div className="aboutMeIcon">
-                <FontAwesomeIcon icon={faBolt} alt="rigueur" />
-                <p>Rigueur</p>
-              </div>
-            </div>
-            <div className="aboutMeText">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Tempore debitis natus quos cumque perferendis dolorem, 
-                at beatae dolore corrupti ipsam dolor omnis dolorum dicta similique fugit? 
-                Corrupti exercitationem totam architecto.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Tempore debitis natus quos cumque perferendis dolorem, 
-                at beatae dolore corrupti ipsam dolor omnis dolorum dicta similique fugit? 
-                Corrupti exercitationem totam architecto.
-              </p>
-            </div>
           </div>
         </div>
       </div>
