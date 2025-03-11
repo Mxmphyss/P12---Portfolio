@@ -41,12 +41,12 @@ const aboutMe = () => {
               <div className="aboutMeText">
               <p>
                 Je m'appelle <strong>Samuel</strong>, j'ai 22 ans et j'habite dans le <strong>Loiret (45)</strong>.  
-                Je suis un <strong>étudiant autodidacte</strong> qui a certifié ses compétences grâce à un parcours d'études 
+                Je suis un <strong>étudiant autodidacte</strong> qui a certifié ses compétences jusqu'à un parcours d'études 
                 de niveau <strong>BTS ( Titre RNCP de niveau 5 )</strong>.  
                 
                 Passionné par le <strong>design</strong> et l'<strong>informatique</strong> en général, 
                 j'ai exploré et utilisé diverses technologies modernes, notamment celles intégrées dans ce portfolio et celles que vous découvrirez plus tard.  
-                Mon objectif est de pouvoir à vos attentes en créant des interfaces fluides, immersives et esthétiquement abouties.
+                Mon objectif est de pourvoir à vos attentes en créant des interfaces fluides, immersives et esthétiquement abouties.
               </p>
               </div>
             </div>

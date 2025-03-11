@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser, faHome, faProjectDiagram, faEnvelope, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 
-const sections = [
-  { id: "aboutMe", icon: faCircleUser },
-  { id: "technologies", icon: faLaptopCode },
-  { id: "projects", icon: faProjectDiagram },
-  { id: "contact", icon: faEnvelope },
-];
-
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1100);
+
+  const iconSave = "<FontAwesomeIcon icon={icon} />";
+
+
+  const sections = [
+    { id: "aboutMe", name: "À propos de moi", icon: faCircleUser},
+    { id: "technologies", name: "Technologies", icon: faLaptopCode },
+    { id: "projects", name: "Projets", icon: faProjectDiagram },
+    { id: "contact", name: "Contact", icon: faEnvelope },
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,9 +30,9 @@ const Header = () => {
           <h1 className="title">Prauca Samuel</h1>
           <nav className="navbar">
             <ul>
-              {sections.map(({ id }) => (
+              {sections.map(({ id, name }) => (
                 <li key={id}>
-                  <a href={`#${id}`}>{id.toUpperCase()}</a>
+                  <a href={`#${id}`}>{name}</a>
                 </li>
               ))}
             </ul>

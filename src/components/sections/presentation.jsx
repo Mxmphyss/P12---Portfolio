@@ -14,7 +14,7 @@ const Presentation = () => {
       >
         <div className="titleBox">
           <h1>Bienvenue sur mon Portfolio</h1>
-          <p>Je suis Développeur web, spécialisé en React</p>
+          <p>Je suis intégrateur web spécialisé en React</p>
         </div>
       </motion.div>
     </section>

@@ -23,6 +23,11 @@
     100% { background-position: 0% 50%; }
   }
 
+  h2 {
+    color: $starlight-yellow;
+    margin-bottom: 50px;
+  }
+
   .project-grid {
     @extend %flex-around;
     flex-wrap: wrap;
@@ -64,45 +69,6 @@
     }
   }
 }
-
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-
-    .modal-content {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      width: 90%;
-      max-width: 600px;
-      position: relative;
-    }
-
-    .modal-icon {
-      width: 80px;
-      height: auto;
-      margin-bottom: 15px;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-  }
 
   @media screen and (max-width: 1024px) {
     .projects {
