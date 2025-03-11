@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import data from "@data";
-import Modal from "@features/Modal";
+import Modal from "@features/modal";
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
