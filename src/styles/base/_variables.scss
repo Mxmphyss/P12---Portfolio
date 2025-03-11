@@ -6,12 +6,9 @@ $third-color: #ffd700;  // Jaune étoilé (inspiré des étoiles)
 $fourth-color: #ffffff;        // Blanc pur
 $five-color: #333;
 
-$color-nebula-purple: #5d2e8c; // Violet nébuleuse
-$color-nebula-pink: #ff6ec7;  // Rose cosmique
-
 $text-color: #333;
 
-// Couleurs principales pour du ROSE
+// Variables de couleurs roses inspirées de l’espace
 
 $red-pink: #ff3366;  // Rouge tirant vers le rose
 $pink-white: #ffccdd; // Rose pastel proche du blanc
@@ -22,7 +19,8 @@ $dark-rose: #b3003c; // Rose très foncé
 $light-red-pink: #ff99aa; // Rose clair avec une teinte rouge
 $warm-white: #fff5f7; // Blanc légèrement chaud avec une nuance rosée
 
-// Couleurs principales pour du BLEU
+// Variables de couleurs bleu inspirées de l’espace
+
 $deep-space-blue: #0a0f2c;  // Bleu spatial très foncé, presque noir
 $midnight-blue: #0d1b3d;    // Bleu nuit profond
 $galaxy-blue: #102a66;      // Bleu galaxie intense
@@ -32,7 +30,6 @@ $cosmic-light: #62a7ff;     // Bleu clair cosmique
 $icy-blue: #a8d0ff;         // Bleu glacial, proche des étoiles froides
 $white-blue: #e6f2ff;       // Blanc bleuté, lumineux comme un reflet d’étoile
 
-// Couleurs de variation
 $dark-void: #070a1c;        // Bleu noir absolu, fond d’espace profond
 $purple-blue: #2e1a47;      // Bleu avec une touche violette, style nébuleuse
 $electric-blue: #0077ff;    // Bleu électrique vibrant, proche des éclairs cosmiques
@@ -40,3 +37,33 @@ $fading-blue: #395a9d;      // Bleu en dégradé vers le blanc spatial
 $glow-blue: #9bdcff;        // Bleu lumineux, effet de lueur cosmique
 $moonlight-blue: #c4e5ff;   // Bleu pâle lunaire
 
+// Variables de couleurs jaunes inspirées de l’espace
+
+$golden-yellow: #FFD700;   // Jaune doré éclatant
+$starlight-yellow: #FFFACD; // Jaune pâle lumineux (Lemon Chiffon)
+$deep-gold: #DAA520;       // Or foncé
+$cosmic-yellow: #FFCC00;   // Jaune vif avec une teinte spatiale
+$nebula-gold: #E6B400;     // Or chaud rappelant une nébuleuse
+$stellar-glow: #FFDB58;    // Doré lumineux inspiré des étoiles
+$sunburst: #FFC107;        // Jaune éclatant proche de la lumière solaire
+$celestial-amber: #FFBF00; // Ambre spatial profond
+$dusty-gold: #B8860B;      // Or vieilli, rappelant la poussière cosmique
+$moonlight-yellow: #FAFAD2; // Jaune clair presque lunaire (Light Goldenrod Yellow)
+
+// Variables de couleurs noires et grises inspirées de l’espace
+
+$deep-space-black: #0a0a0a; // Noir spatial profond
+$dark-nebula-gray: #1c1c1c; // Gris foncé, style nébuleuse
+$cosmic-gray: #3a3a3a;     // Gris cosmique, proche de l’espace
+$starlight-white: #f5f5f5; // Blanc cosmique, lumineux comme une étoile
+$silver-glow: #b3b3b3;    // Gris argenté, effet de lueur cosmique
+$foggy-white: #e6e6e6;   // Blanc légèrement gris, proche de la brume cosmique
+$supernova-white: #ffffff; // Blanc pur, éclatant comme une supernova
+
+// le responsive design et les animations CSS
+
+$breakpoints: (
+  "mobile": 480px,
+  "tablet": 768px,
+  "desktop": 1024px
+);

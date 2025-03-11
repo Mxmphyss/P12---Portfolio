@@ -49,7 +49,7 @@ button {
   cursor: pointer;
 }
 
-.mainSection, .aboutMe .containerAboutMe .aboutMeLinks, .projects .project-card, .presentation .presentation-content .titleBox, .modal-overlay, .navbar ul {
+.mainSection, .aboutMe .container .containerAboutMe .aboutMeLinks, .aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills, .projects .project-grid .project-card, .presentation .presentation-content .titleBox, .modal-overlay, .navbar ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,12 +60,12 @@ button {
   justify-content: space-around;
 }
 
-.mainSection, .projects .project-card, .presentation .presentation-content, .modal-overlay {
+.mainSection, .projects .project-grid .project-card, .presentation .presentation-content, .modal-overlay {
   display: flex;
   flex-direction: column;
 }
 
-.aboutMe .containerAboutMe .aboutMeContent .aboutMeImages {
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills {
   display: flex;
   flex-direction: row;
 }
@@ -86,7 +86,7 @@ button {
   padding: 15px;
 }
 
-.mainSection, .aboutMe .containerAboutMe .aboutMeLinks, .projects .project-card, .presentation .presentation-content .titleBox, .modal-overlay, .navbar ul {
+.mainSection, .aboutMe .container .containerAboutMe .aboutMeLinks, .aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills, .projects .project-grid .project-card, .presentation .presentation-content .titleBox, .modal-overlay, .navbar ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,12 +97,12 @@ button {
   justify-content: space-around;
 }
 
-.mainSection, .projects .project-card, .presentation .presentation-content, .modal-overlay {
+.mainSection, .projects .project-grid .project-card, .presentation .presentation-content, .modal-overlay {
   display: flex;
   flex-direction: column;
 }
 
-.aboutMe .containerAboutMe .aboutMeContent .aboutMeImages {
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills {
   display: flex;
   flex-direction: row;
 }
@@ -171,7 +171,48 @@ header {
   background-color: #0b3d91;
 }
 
-.mainSection, .aboutMe .containerAboutMe .aboutMeLinks, .projects .project-card, .presentation .presentation-content .titleBox, .modal-overlay, .navbar ul {
+@media (max-width: 1100px) {
+  .navbar {
+    display: none;
+  }
+  .bottom-nav {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+  }
+  .bottom-nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .bottom-nav li {
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+  }
+  .bottom-nav li:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .bottom-nav li a {
+    color: white;
+    font-size: 1.5rem;
+  }
+}
+.mainSection, .aboutMe .container .containerAboutMe .aboutMeLinks, .aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills, .projects .project-grid .project-card, .presentation .presentation-content .titleBox, .modal-overlay, .navbar ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,12 +223,12 @@ header {
   justify-content: space-around;
 }
 
-.mainSection, .projects .project-card, .presentation .presentation-content, .modal-overlay {
+.mainSection, .projects .project-grid .project-card, .presentation .presentation-content, .modal-overlay {
   display: flex;
   flex-direction: column;
 }
 
-.aboutMe .containerAboutMe .aboutMeContent .aboutMeImages {
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills {
   display: flex;
   flex-direction: row;
 }
@@ -204,11 +245,10 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background-color: white;
   z-index: 1000;
 }
-
-.modal-content {
+.modal-overlay .modal-content {
   background: white;
   padding: 20px;
   border-radius: 10px;
@@ -219,15 +259,11 @@ header {
   position: relative;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-.modal-content h2 {
+.modal-overlay .modal-content h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
 }
-.modal-content p {
-  font-size: 1rem;
-  color: #333;
-}
-.modal-content a {
+.modal-overlay .modal-content a {
   display: inline-block;
   margin-top: 10px;
   padding: 10px;
@@ -236,86 +272,81 @@ header {
   text-decoration: none;
   border-radius: 5px;
 }
-
-.modal-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-}
-.modal-nav button {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-.modal-nav button:hover {
-  background: #0056b3;
-}
-
-.modal-body h2 {
+.modal-overlay .modal-body h2 {
   height: 20%;
 }
-.modal-body p {
+.modal-overlay .modal-body p {
+  margin: 20px 20px;
   height: 70%;
+  font-size: 1.1rem;
 }
-.modal-body a {
-  margin-top: 20%;
+.modal-overlay .modal-body a {
+  margin-top: 20px;
 }
-.modal-body .modal-header {
+.modal-overlay .modal-body .modal-header {
   padding: 5px;
 }
-.modal-body .modal-header img {
-  width: 20%;
+.modal-overlay .modal-body .modal-header img {
+  width: 150px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.close-btn {
+.modal-overlay .modal-body .modal-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.modal-overlay .modal-body .modal-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.modal-overlay .modal-body .modal-link {
+  background-color: #0b3d91;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.modal-overlay .modal-body .modal-link :hover {
+  background-color: #9bdcff;
+}
+.modal-overlay .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   cursor: pointer;
 }
 
-.bouncing-balls {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 30px;
-}
-.bouncing-balls .ball {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  animation: bounce 2s infinite ease-in-out;
-}
-.bouncing-balls .ball.falling {
-  animation: fall 0.8s ease-in-out forwards;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
+@media screen and (max-width: 1024px) {
+  .modal-content {
+    width: 80%;
+    max-width: 700px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
   }
-  50% {
-    transform: translateY(-30px);
+  .modal-content .modal-body .modal-header h2 {
+    font-size: 1.2rem;
   }
-}
-@keyframes fall {
-  0% {
-    transform: translateY(-50px);
+  .modal-content .modal-body .modal-header p {
+    font-size: 1rem;
+    line-height: 1.4;
   }
-  100% {
-    transform: translateY(0);
+  .modal-content .modal-body .modal-images img {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
   }
 }
-.mainSection, .aboutMe .containerAboutMe .aboutMeLinks, .projects .project-card, .presentation .presentation-content .titleBox, .navbar ul, .modal-overlay {
+.mainSection, .aboutMe .container .containerAboutMe .aboutMeLinks, .aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills, .projects .project-grid .project-card, .presentation .presentation-content .titleBox, .navbar ul, .modal-overlay {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -326,12 +357,12 @@ header {
   justify-content: space-around;
 }
 
-.mainSection, .projects .project-card, .presentation .presentation-content, .modal-overlay {
+.mainSection, .projects .project-grid .project-card, .presentation .presentation-content, .modal-overlay {
   display: flex;
   flex-direction: column;
 }
 
-.aboutMe .containerAboutMe .aboutMeContent .aboutMeImages {
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills {
   display: flex;
   flex-direction: row;
 }
@@ -401,10 +432,43 @@ header {
   max-width: max-content;
 }
 
+@media screen and (max-width: 1024px) {
+  .presentation {
+    margin: 0;
+    margin-bottom: 30px;
+    border-radius: 0;
+    border-bottom: solid white 2px;
+  }
+  .presentation .presentation-content .titleBox h1 {
+    font-size: 1.5rem;
+  }
+  .presentation .presentation-content .titleBox p {
+    font-size: 1rem;
+  }
+}
 .technologies {
-  height: 80%;
+  background: linear-gradient(45deg, #0a0f2c, #0d1b3d, #102a66, #1a3a80, #2472c8, #62a7ff, #a8d0ff, #e6f2ff);
   padding: 80px 20px;
   text-align: center;
+  border: 2px solid #FAFAD2;
+  border-radius: 10px;
+  background-size: 300% 300%;
+  animation: gradient-animation 10s infinite alternate;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.technologies h2 {
+  color: #c4e5ff;
+  -webkit-text-stroke: 0.1px #a8d0ff;
 }
 .technologies .tech-list {
   display: flex;
@@ -430,7 +494,15 @@ header {
   color: white;
 }
 
-.mainSection, .aboutMe .containerAboutMe .aboutMeLinks, .projects .project-card, .navbar ul, .modal-overlay, .presentation .presentation-content .titleBox {
+@media screen and (max-width: 1024px) {
+  .technologies .tech-list .itemTech {
+    height: 150px;
+    width: 100% !important;
+    display: block;
+    margin: 10px 0;
+  }
+}
+.mainSection, .aboutMe .container .containerAboutMe .aboutMeLinks, .aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills, .projects .project-grid .project-card, .navbar ul, .modal-overlay, .presentation .presentation-content .titleBox {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -441,12 +513,12 @@ header {
   justify-content: space-around;
 }
 
-.mainSection, .projects .project-card, .modal-overlay, .presentation .presentation-content {
+.mainSection, .projects .project-grid .project-card, .modal-overlay, .presentation .presentation-content {
   display: flex;
   flex-direction: column;
 }
 
-.aboutMe .containerAboutMe .aboutMeContent .aboutMeImages {
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills {
   display: flex;
   flex-direction: row;
 }
@@ -461,6 +533,23 @@ header {
   width: 100%;
   padding: 100px 100px;
   text-align: center;
+  background: linear-gradient(-45deg, #FFD700, #E6B400, #FFDB58, #DAA520);
+  border: 2px solid #e6f2ff;
+  border-radius: 10px;
+  background-size: 300% 300%;
+  overflow: hidden;
+  animation: cosmicFlow 10s infinite alternate ease-in-out;
+}
+@keyframes cosmicFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .projects .project-grid {
   flex-wrap: wrap;
@@ -468,7 +557,7 @@ header {
   gap: 20px;
   margin: 40px;
 }
-.projects .project-card {
+.projects .project-grid .project-card {
   width: 40%;
   min-width: 175px;
   justify-content: space-between;
@@ -479,10 +568,10 @@ header {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.projects .project-card:hover {
+.projects .project-grid .project-card:hover {
   transform: scale(1.05);
 }
-.projects .project-card img {
+.projects .project-grid .project-card img {
   width: 100px;
   height: 40px;
   background-color: white;
@@ -490,7 +579,7 @@ header {
   max-width: 100px;
   margin-bottom: 10px;
 }
-.projects .project-card h3 {
+.projects .project-grid .project-card h3 {
   color: white;
   font-size: 1.2rem;
 }
@@ -531,36 +620,21 @@ header {
   cursor: pointer;
 }
 
-.contact {
-  text-align: center;
-  padding: 80px 20px;
+@media screen and (max-width: 1024px) {
+  .projects {
+    padding: 50px 10px;
+  }
+  .projects .project-grid {
+    margin-top: 50px;
+  }
+  .projects .project-grid .project-card {
+    height: 150px;
+    width: 100% !important;
+    display: block;
+    margin: 10px 0;
+  }
 }
-.contact form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: auto;
-  gap: 10px;
-}
-.contact form input, .contact form textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-.contact form button {
-  background: #007bff;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.contact form button:hover {
-  background: #0056b3;
-}
-
-.mainSection, .aboutMe .containerAboutMe .aboutMeLinks, .navbar ul, .modal-overlay, .presentation .presentation-content .titleBox, .projects .project-card {
+.mainSection, .aboutMe .container .containerAboutMe .aboutMeLinks, .aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills, .navbar ul, .modal-overlay, .presentation .presentation-content .titleBox, .projects .project-grid .project-card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -571,12 +645,131 @@ header {
   justify-content: space-around;
 }
 
-.mainSection, .modal-overlay, .presentation .presentation-content, .projects .project-card {
+.mainSection, .modal-overlay, .presentation .presentation-content, .projects .project-grid .project-card {
   display: flex;
   flex-direction: column;
 }
 
-.aboutMe .containerAboutMe .aboutMeContent .aboutMeImages {
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  font-family: "Anton", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contact {
+  text-align: center;
+  padding: 80px 20px;
+  padding-left: 100px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-120deg, #3a3a3a, #b3b3b3, #3a3a3a, #1c1c1c, #0a0a0a);
+  background-size: 200% 200%;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  animation: spaceMotion 10s infinite ease-in-out;
+}
+@keyframes spaceMotion {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.contact .containerContact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contact .containerContact img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 20px;
+  border: 2px solid #ffffff;
+}
+.contact .containerContact .contactContent {
+  background-color: transparent;
+  border: 2px solid #b3b3b3;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px #0a0a0a;
+}
+.contact .containerContact .contactContent h2 {
+  color: #1c1c1c;
+}
+.contact .containerContact .contactContent form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 10px;
+}
+.contact .containerContact .contactContent form input, .contact .containerContact .contactContent form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.contact .containerContact .contactContent form button {
+  background: #1c1c1c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact .containerContact .contactContent form button:hover {
+  background: #3a3a3a;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding-left: 20px;
+  }
+  .contact .containerContact {
+    flex-direction: column;
+  }
+  .contact .containerContact img {
+    width: 200px;
+    height: 200px;
+    margin-right: 0;
+    margin-bottom: 70px;
+  }
+  .contact .containerContact .contactContent {
+    height: 400px;
+  }
+  .contact .containerContact .contactContent button {
+    margin-top: 20px;
+  }
+}
+.mainSection, .aboutMe .container .containerAboutMe .aboutMeLinks, .aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills, .navbar ul, .modal-overlay, .presentation .presentation-content .titleBox, .projects .project-grid .project-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects .project-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mainSection, .modal-overlay, .presentation .presentation-content, .projects .project-grid .project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills {
   display: flex;
   flex-direction: row;
 }
@@ -588,33 +781,91 @@ header {
 }
 
 .aboutMe {
+  border: solid 2px white;
+  border-radius: 10px;
   padding: 50px;
+  background: linear-gradient(45deg, #b3003c, #d81b60, #ff3366, #ff6b6b, #ff99aa, #ffccdd, #fff0f5, #fff5f7);
+  background-size: 300% 300%;
+  animation: gradient-animation 10s infinite alternate;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .aboutMe .container {
   text-align: center;
-  color: #fff;
+  color: #0b3d91;
 }
-.aboutMe .containerAboutMe {
-  gap: 20px;
-}
-.aboutMe .containerAboutMe .sectionTitle {
+.aboutMe .container .sectionTitle {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.aboutMe .containerAboutMe .aboutMeLinks {
+.aboutMe .container .sectionTitle h2 {
+  color: #0b3d91;
+}
+.aboutMe .container .containerAboutMe .firstContentAboutMe {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills {
+  gap: 20px;
+  flex-wrap: nowrap;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 40px;
+}
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills .aboutMeIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 65px;
+  width: 135px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #fff0f5;
+}
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills .aboutMeIcon:hover {
+  background: #b3003c;
+  color: #fff0f5;
+}
+.aboutMe .container .containerAboutMe .firstContentAboutMe .wallpaperImg img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 20px;
+  border: 2px solid #ffffff;
+}
+.aboutMe .container .containerAboutMe .aboutMeLinks {
   flex-direction: row;
   gap: 20px;
   margin: 50px 0;
 }
-.aboutMe .containerAboutMe .aboutMeLinks .forLink {
+.aboutMe .container .containerAboutMe .aboutMeLinks .forLink {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-.aboutMe .containerAboutMe .aboutMeLinks .forLink button {
-  background: transparent;
-  border: 2px solid #0b3d91;
+.aboutMe .container .containerAboutMe .aboutMeLinks .forLink button {
+  background: #fff0f5;
+  border: 2px solid #fff0f5;
   color: #0b3d91;
   padding: 10px 20px;
   font-size: 1rem;
@@ -623,45 +874,86 @@ header {
   border-radius: 5px;
   transition: 0.3s ease-in-out;
 }
-.aboutMe .containerAboutMe .aboutMeLinks .forLink button:hover {
-  background: #0b3d91;
-  color: white;
+.aboutMe .container .containerAboutMe .aboutMeLinks .forLink button:hover {
+  background: #b3003c;
+  color: #fff0f5;
 }
-.aboutMe .containerAboutMe .aboutMeContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  border-radius: 10px;
-}
-.aboutMe .containerAboutMe .aboutMeContent .aboutMeImages {
-  gap: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 20px;
-}
-.aboutMe .containerAboutMe .aboutMeContent .aboutMeImages .aboutMeIcon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 130px;
-  padding: 10px;
-  border-radius: 25px;
-  background-color: #0b3d91;
-}
-.aboutMe .containerAboutMe .aboutMeContent .aboutMeImages .aboutMeIcon:hover {
-  background: #0b3d91;
-}
-.aboutMe .containerAboutMe .aboutMeText {
-  padding: 10px;
-  border: 2px solid #0b3d91;
+.aboutMe .container .containerAboutMe .aboutMeText {
+  background-color: #fff0f5;
+  padding: 15px;
+  border: 2px solid #fff0f5;
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #333;
   border-radius: 25px;
 }
 
-.mainSection, .navbar ul, .modal-overlay, .presentation .presentation-content .titleBox, .projects .project-card, .aboutMe .containerAboutMe .aboutMeLinks {
+@media screen and (max-width: 1390px) {
+  .aboutMe {
+    padding: 30px;
+  }
+  .aboutMe .container .containerAboutMe .firstContentAboutMe {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent {
+    text-align: center;
+  }
+  .aboutMe .container .containerAboutMe .firstContentAboutMe .wallpaperImg img {
+    width: 250px;
+    height: 250px;
+  }
+  .aboutMe .container .containerAboutMe .aboutMeLinks {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutMe .container .containerAboutMe .aboutMeLinks .forLink {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .aboutMe .container .containerAboutMe .aboutMeText {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .aboutMe {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .aboutMe {
+    padding: 20px;
+  }
+  .aboutMe .container .sectionTitle h2 {
+    font-size: 1.4rem;
+  }
+  .aboutMe .container .containerAboutMe .firstContentAboutMe {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent {
+    width: 100%;
+  }
+  .aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .aboutMe .container .containerAboutMe .firstContentAboutMe .wallpaperImg img {
+    width: 200px;
+    height: 200px;
+  }
+  .aboutMe .container .containerAboutMe .aboutMeLinks {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .aboutMe .container .containerAboutMe .aboutMeText {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+.mainSection, .navbar ul, .modal-overlay, .presentation .presentation-content .titleBox, .projects .project-grid .project-card, .aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills, .aboutMe .container .containerAboutMe .aboutMeLinks {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -672,12 +964,12 @@ header {
   justify-content: space-around;
 }
 
-.mainSection, .modal-overlay, .presentation .presentation-content, .projects .project-card {
+.mainSection, .modal-overlay, .presentation .presentation-content, .projects .project-grid .project-card {
   display: flex;
   flex-direction: column;
 }
 
-.aboutMe .containerAboutMe .aboutMeContent .aboutMeImages {
+.aboutMe .container .containerAboutMe .firstContentAboutMe .aboutMeContent .aboutMeSkills {
   display: flex;
   flex-direction: row;
 }
@@ -689,13 +981,20 @@ header {
 }
 
 .mainSection {
-  background-color: #090a0f;
-  color: #333;
   margin: 25px;
   border-radius: 10px;
-  border: solid 2px #ffffff;
 }
 .mainSection h2 {
   margin: 20px;
-  color: #007bff;
+}
+
+@media screen and (max-width: 1024px) {
+  .mainSection {
+    margin: 10px;
+    margin-bottom: 30px;
+  }
+  #presentation {
+    margin: 0;
+    border-radius: none;
+  }
 }/*# sourceMappingURL=main.css.map */

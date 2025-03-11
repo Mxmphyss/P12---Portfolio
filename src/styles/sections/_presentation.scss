@@ -64,3 +64,28 @@
 
   }
 }
+
+// Mixin pour utiliser les breakpoints
+
+@media screen and (max-width: 1024px) {
+  .presentation {
+    margin: 0;
+    margin-bottom: 30px;
+    border-radius: 0;
+    border-bottom: solid white 2px;
+
+    .presentation-content {
+      
+      .titleBox {
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

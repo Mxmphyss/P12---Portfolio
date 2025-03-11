@@ -1,23 +1,74 @@
 {
-    "presentation": {
-      "title": "MON PORTFOLIO D'INTÉGRATEUR WEB",
-      "description": "Je suis un développeur spécialisé en React"
-    },
     "technologies": [
-      { "name": "React", "image": "/assets/image/React-icon.svg.png", "description": "Bibliothèque JavaScript pour interfaces utilisateur." },
-      { "name": "Redux", "image": "/assets/image/logo-redux.webp", "description": "Gestion d'état prévisible pour JavaScript apps." },
-      { "name": "SCSS", "image": "/assets/image/Sass_Logo_Color.svg.png", "description": "Préprocesseur CSS puissant et flexible." },
-      { "name": "Html 5", "image": "/assets/image/HTML5_logo_and_wordmark.svg.png", "description": "Environnement d'exécution JavaScript côté serveur." },
-      { "name": "CSS 3", "image": "/assets/image/CSS3_logo_and_wordmark.svg.png", "description": "Base de données NoSQL orientée document." },
-      { "name": "Javascript", "image": "/assets/image/Javascript-736400_960_720.png", "description": "Framework web minimaliste pour Node.js."  },
-      { "name": "Git et Github", "image": "/assets/image/git-vs-github.webp", "description": "Système de contrôle de version distribué / Plateforme de développement collaboratif." },
-      { "name": "Swagger", "image": "/assets/image/Swagger-logo.png", "description": "langage de description d'interface d'API afin de créer, documenter et utiliser des services Web." }
-    
+      {
+        "id": 1,
+        "forAlt": "React",
+        "name": "React",
+        "image": "/assets/image/React-icon.svg.png",
+        "description": "React est une bibliothèque JavaScript développée par Facebook, utilisée pour créer des interfaces utilisateur dynamiques et réactives. Elle repose sur un système de composants et utilise un Virtual DOM pour optimiser les mises à jour et améliorer les performances.",
+        "link": "https://fr.reactjs.org/"
+      },
+      {
+        "id": 2,
+        "forAlt": "Redux",
+        "name": "Redux",
+        "image": "/assets/image/logo-redux.webp",
+        "description": "Redux est une bibliothèque de gestion d’état pour JavaScript, souvent utilisée avec React. Elle repose sur le principe d’un store global unique qui stocke l’état de l’application, permettant un flux de données prévisible et un débogage simplifié.",
+        "link": "https://redux.js.org/"
+      },
+      {
+        "id": 3,
+        "forAlt": "Sass",
+        "name": "SCSS",
+        "image": "/assets/image/Sass_Logo_Color.svg.png",
+        "description": "Sass (Syntactically Awesome Stylesheets) est un préprocesseur CSS qui ajoute des fonctionnalités avancées comme les variables, les mixins, les boucles et l’imbrication. Il facilite l’organisation et la maintenance des styles.",
+        "link": "https://sass-lang.com/"
+      },
+      {
+        "id": 4,
+        "forAlt": "HTML5",
+        "name": "HTML5",
+        "image": "/assets/image/HTML5_logo_and_wordmark.svg.png",
+        "description": "HTML5 est la dernière version du langage HTML utilisé pour structurer le contenu des pages web. Il introduit de nouvelles balises sémantiques, des APIs puissantes et une meilleure prise en charge du multimédia.",
+        "link": "https://developer.mozilla.org/fr/docs/Web/HTML"
+      },
+      {
+        "id": 5,
+        "forAlt": "CSS3",
+        "name": "CSS3",
+        "image": "/assets/image/CSS3_logo_and_wordmark.svg.png",
+        "description": "CSS3 est la dernière version de CSS qui permet de styliser les pages web. Il introduit des fonctionnalités avancées comme les animations, les transitions, le flexbox et le grid.",
+        "link": "https://developer.mozilla.org/fr/docs/Web/CSS"
+      },
+      {
+        "id": 6,
+        "forAlt": "JavaScript",
+        "name": "JavaScript",
+        "image": "/assets/image/Javascript-736400_960_720.png",
+        "description": "JavaScript est un langage de programmation permettant d’ajouter des fonctionnalités interactives aux sites web. Il est exécuté côté client mais peut aussi être utilisé côté serveur avec Node.js.",
+        "link": "https://developer.mozilla.org/fr/docs/Web/JavaScript"
+      },
+      {
+        "id": 7,
+        "forAlt": "Git & GitHub",
+        "name": "Git & GitHub",
+        "image": "/assets/image/git-vs-github.webp",
+        "description": "Git est un système de gestion de versions distribué qui permet de suivre l’évolution d’un projet. GitHub est une plateforme d’hébergement de code permettant de collaborer sur des projets.",
+        "link": "https://git-scm.com/"
+      },
+      {
+        "id": 8,
+        "forAlt": "Swagger",
+        "name": "Swagger",
+        "image": "/assets/image/Swagger-logo.png",
+        "description": "Swagger est un outil de documentation et de test des API basé sur le format OpenAPI. Il permet de décrire, tester et générer automatiquement la documentation des API REST.",
+        "link": "https://swagger.io/"
+      }
     ],
     "projects": [
       {
         "id": 1,
-        "name": "Projet 1",
+        "forAlt": "Projet 1",
         "description": "Un site d'hôtel de vacances codé avec HTML et CSS.",
         "image": {
           "icon": "/assets/maquettes/booki-icon.png",
@@ -27,7 +78,7 @@
       },
       {
         "id": 2,
-        "name": "Projet 2",
+        "forAlt": "Projet 2",
         "description": "Un site de menus de restauration gastronomique codé avec HTML, CSS et des animations CSS.",
         "image": {
           "icon": "/assets/maquettes/omf-icon.png",
@@ -37,7 +88,7 @@
       },
       {
         "id": 3,
-        "name": "Projet 3",
+        "forAlt": "Projet 3",
         "description": "Une application web de location immobilière codée avec HTML, CSS et React.",
         "image": {
           "icon": "/assets/maquettes/kasa-icon.png",
@@ -47,13 +98,20 @@
       },
       {
         "id": 4,
-        "name": "Projet 4",
+        "forAlt": "Projet 4",
         "description": "Une application web bancaire avec HTML, CSS et React et Redux",
         "image": {
           "icon": "/assets/maquettes/argentBank-icon.png",
           "desktop": "/assets/maquettes/argentBank-desktop.png"
         },
         "link": "https://github.com/user/projet4"
+      }
+    ],
+    "modal": [
+      {
+      "id": 1,
+      "image": "/assets/image/wallpaper/7CC7CA72-0C10-4121-BC22-8FA918D2DDB8.WEBP",
+      "name": "Nébuleuse d'étoiles bleuetées"
       }
     ]
   }

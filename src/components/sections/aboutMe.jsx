@@ -39,16 +39,15 @@ const aboutMe = () => {
                 </div>
               </div>
               <div className="aboutMeText">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Tempore debitis natus quos cumque perferendis dolorem, 
-                  at beatae dolore corrupti ipsam dolor omnis dolorum dicta similique fugit? 
-                  Corrupti exercitationem totam architecto.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Tempore debitis natus quos cumque perferendis dolorem, 
-                  at beatae dolore corrupti ipsam dolor omnis dolorum dicta similique fugit? 
-                  Corrupti exercitationem totam architecto.
-                </p>
+              <p>
+                Je m'appelle <strong>Samuel</strong>, j'ai 22 ans et j'habite dans le <strong>Loiret (45)</strong>.  
+                Je suis un <strong>étudiant autodidacte</strong> qui a certifié ses compétences grâce à un parcours d'études 
+                de niveau <strong>BTS ( Titre RNCP de niveau 5 )</strong>.  
+                
+                Passionné par le <strong>design</strong> et l'<strong>informatique</strong> en général, 
+                j'ai exploré et utilisé diverses technologies modernes, notamment celles intégrées dans ce portfolio et celles que vous découvrirez plus tard.  
+                Mon objectif est de pouvoir à vos attentes en créant des interfaces fluides, immersives et esthétiquement abouties.
+              </p>
               </div>
             </div>
             <div className="wallpaperImg">
@@ -57,12 +56,12 @@ const aboutMe = () => {
           </div>
           <div className="aboutMeLinks">
               <div className="forLink">
-                  <button>
+                  <button onClick={() => window.open('/assets/cv.pdf', '_blank')}>
                       <p>Télécharger mon CV</p>
                   </button>
               </div>
               <div className="forLink">
-                  <button>
+                  <button onClick={() => window.open('https://www.francecompetences.fr/recherche/rncp/38145/', '_blank')}>
                       <p>Certification</p>
                   </button>
               </div>

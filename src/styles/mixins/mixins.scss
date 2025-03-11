@@ -1,0 +1,8 @@
+// Mixin pour utiliser les breakpoints
+@mixin respond($device) {
+    @if map-has-key($breakpoints, $device) {
+      @media (max-width: map-get($breakpoints, $device)) {
+        @content;
+      }
+    }
+  }

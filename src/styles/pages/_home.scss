@@ -10,3 +10,14 @@
     margin: 20px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .mainSection {
+    margin: 10px;
+    margin-bottom: 30px;
+  }
+  #presentation {
+    margin: 0;
+    border-radius: none;
+  }
+}

@@ -55,15 +55,18 @@
 
           .aboutMeSkills {
             gap: 20px;
+            @extend %flex-center;
             @extend %flex-row;
+            flex-wrap: nowrap;
             object-fit: cover;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
 
             .aboutMeIcon {
               display: flex;
               flex-direction: column;
-              justify-content: space-between;
-              width: 130px;
+              justify-content: space-evenly;
+              height: 65px;
+              width: 135px;
               padding: 10px;
               border-radius: 25px;
               background-color: $white-rose;
@@ -79,12 +82,12 @@
         .wallpaperImg {
 
           img {
-          width: 300px;
-          height: 300px;
-          border-radius: 50%;
-          object-fit: cover;
-          margin-right: 20px;
-          border: 2px solid $fourth-color;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+            border: 2px solid $fourth-color;
           }
         }
     
@@ -122,11 +125,101 @@
     
       .aboutMeText {
         background-color: $white-rose;
-        padding: 10px;
+        padding: 15px;
         border: 2px solid $white-rose;
         font-size: 1.2rem;
         line-height: 1.6;
         border-radius: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  .aboutMe {
+    padding: 30px;
+    
+    .container {
+      .containerAboutMe {
+        .firstContentAboutMe {
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+
+          .aboutMeContent {
+            text-align: center;
+          }
+
+          .wallpaperImg img {
+            width: 250px;
+            height: 250px;
+          }
+        }
+
+        .aboutMeLinks {
+          flex-direction: column;
+          align-items: center;
+
+          .forLink {
+            flex-direction: column;
+            gap: 10px;
+          }
+        }
+
+        .aboutMeText {
+          font-size: 1rem;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .aboutMe {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMe {
+    padding: 20px;
+    
+    .container {
+      .sectionTitle h2 {
+        font-size: 1.4rem;
+      }
+
+      .containerAboutMe {
+        .firstContentAboutMe {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          .aboutMeContent {
+            width: 100%;
+
+            .aboutMeSkills {
+              flex-wrap: wrap;
+              gap: 10px;
+            }
+          }
+
+          .wallpaperImg img {
+            width: 200px;
+            height: 200px;
+          }
+        }
+
+        .aboutMeLinks {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .aboutMeText {
+          font-size: 0.9rem;
+          padding: 8px;
+        }
       }
     }
   }
