@@ -55,31 +55,46 @@
       h2 {
         color: $dark-nebula-gray;
       }
-  
-      form {
-        display: flex;
-        flex-direction: column;
-        max-width: 400px;
-        margin: auto;
-        gap: 10px;
-    
-        input, textarea {
-          width: 100%;
-          padding: 10px;
-          border-radius: 5px;
-          border: 1px solid #ccc;
-        }
-    
-        button {
-          background: $dark-nebula-gray;
-          color: white;
-          padding: 10px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-    
-          &:hover {
-            background: $cosmic-gray;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          max-width: 400px;
+          margin: auto;
+          gap: 10px;
+
+          fieldset {
+            border: none;
+
+            legend {
+              display: none;
+            }
+
+            label {
+              display: none;
+              color: $dark-nebula-gray;
+              font-size: 1rem;
+            }
+      
+            input, textarea {
+              margin: 10px 0;
+              width: 100%;
+              padding: 10px;
+              border-radius: 5px;
+              border: 1px solid #ccc;
+            }
+        
+            button {
+              background: $dark-nebula-gray;
+              color: white;
+              padding: 10px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+        
+              &:hover {
+                background: $cosmic-gray;
+              }
           }
         }
       }

@@ -48,34 +48,51 @@ const Contact = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+            aria-labelledby="contact-heading"
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Votre nom"
-              required
-              value={formData.name}
-              onChange={handleChange}
-            />
+            <fieldset>
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Votre email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-            />
+              <legend id="contact-heading">Formulaire de contact</legend>
+              
+              <div className="form-group">
+                <label htmlFor="name">Nom :</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Votre nom"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+              </div>
 
-            <textarea
-              name="message"
-              placeholder="Votre message"
-              required
-              value={formData.message}
-              onChange={handleChange}
-            ></textarea>
+              <div className="form-group">
+                <label htmlFor="email">Email :</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Votre email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </div>
 
-            <button type="submit">Envoyer</button>
+              <div className="form-group">
+                <label htmlFor="message">Message :</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Votre message"
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                />
+              </div>
+              <button type="submit">Envoyer</button>
+            </fieldset>
           </motion.form>
         </div>
       </div>
