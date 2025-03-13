@@ -1,10 +1,10 @@
-@import "../base/variables";
+@import "../base/variables" ;
 @import "../placeholders/placeholders";
 
 .presentation {
   position: relative;
-  overflow: hidden; // Empêche les débordements
-  background: url("../../assets/image/wallpaper/bckgdSpace.jpg") center;
+  overflow: hidden;
+  background: url("../../assets/image/wallpaper/bckgdSpace.webp") center;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -64,8 +64,6 @@
 
   }
 }
-
-// Mixin pour utiliser les breakpoints
 
 @media screen and (max-width: 1024px) {
   .presentation {

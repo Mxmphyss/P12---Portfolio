@@ -19,7 +19,7 @@ const Technologies = () => {
                         key={tech.name} 
                         onClick={() => openModal(tech)}
                     >
-                        <img src={tech.image} alt={tech.name} />
+                        <img src={tech.image} alt={tech.name} loading="lazy"/>
                     </button>
                 ))}
             </div>

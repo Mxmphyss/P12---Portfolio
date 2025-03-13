@@ -376,7 +376,7 @@ header {
 .presentation {
   position: relative;
   overflow: hidden;
-  background: url("../../assets/image/wallpaper/bckgdSpace.jpg") center;
+  background: url("../../assets/image/wallpaper/bckgdSpace.webp") center;
   background-size: cover;
   min-height: 100vh;
   display: flex;

@@ -1,19 +1,19 @@
-@import "../base/variables";
-@import "../placeholders/placeholders";
+@import "../base/variables" ;
+@import "../placeholders/placeholders" ;
 
 .aboutMe {
   border: solid 2px white;
   border-radius: 10px;
   padding: 50px;
   background: linear-gradient(45deg, 
-            $dark-rose, 
-            $deep-pink, 
-            $red-pink, 
-            $soft-red, 
-            $light-red-pink, 
-            $pink-white, 
-            $white-rose, 
-            $warm-white
+    $dark-rose, 
+    $deep-pink, 
+    $red-pink, 
+    $soft-red, 
+    $light-red-pink, 
+    $pink-white, 
+    $white-rose, 
+    $warm-white
   );
   background-size: 300% 300%;
   animation: gradient-animation 10s infinite alternate;
