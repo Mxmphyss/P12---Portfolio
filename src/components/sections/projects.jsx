@@ -19,7 +19,7 @@ const Projects = () => {
                         className="project-card" 
                         onClick={() => openModal(project)}
                     >
-                        <img src={project.image.icon} alt={project.name} loading="lazy"/>
+                        <img src={project.image.icon} alt={project.name} />
                         <h3>{project.name}</h3>
                     </div>
                 ))}

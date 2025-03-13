@@ -15,14 +15,14 @@ const Modal = ({ item, onClose, linkText }) => {
 
                 <div className="modal-body">
                     <div className="modal-header">
-                        <img src={item.image?.icon || item.image } alt={item.forAlt} loading="lazy"/>
+                        <img src={item.image?.icon || item.image } alt={item.forAlt} />
                         <h2>{item.name}</h2>
                         <p>{item.description}</p>
                     </div>
 
                     {item.type === "project" && item.image && (
                         <div className="modal-images">
-                            <img src={item.image.desktop} alt={`Illustration de ${item.name}`} className="modal-desktop-img" loading="lazy"/>
+                            <img src={item.image.desktop} alt={`Illustration de ${item.name}`} className="modal-desktop-img" />
                         </div>
                     )}
 
