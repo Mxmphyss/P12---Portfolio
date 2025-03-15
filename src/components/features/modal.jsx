@@ -31,7 +31,9 @@ const Modal = ({ item, onClose, linkText }) => {
 
                     {item.type === "project" && item.image && (
                         <div className="modal-images">
-                            <img src={item.image.desktop} alt={`Illustration de ${item.name}`} className="modal-desktop-img" />
+                            <a href={item.image.desktop} download={`illustration de ${item.forDownloaded}.jpg`}>
+                                <img src={item.image.desktop} alt={`Illustration de ${item.forDownloaded}`} className="modal-desktop-img" />
+                            </a>
                         </div>
                     )}
 

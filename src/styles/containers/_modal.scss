@@ -36,7 +36,6 @@
       display: inline-block;
       margin-top: 10px;
       padding: 10px;
-      background: #007bff;
       color: white;
       text-decoration: none;
       border-radius: 5px;
@@ -131,8 +130,10 @@
       }
 
       .modal-images {
+        cursor: default;
 
         img {
+          cursor: pointer;
           width: 90%;
           max-width: 500px;
           height: auto;

@@ -4,7 +4,7 @@
         "id": 1,
         "forAlt": "React",
         "name": "React",
-        "image": "/assets/image/React-icon.svg.png",
+        "image": "/assets/image/React-icon.svg.webp",
         "description": "React est une bibliothèque JavaScript développée par Facebook, utilisée pour créer des interfaces utilisateur dynamiques et réactives. Elle repose sur un système de composants et utilise un Virtual DOM pour optimiser les mises à jour et améliorer les performances.",
         "link": "https://fr.reactjs.org/"
       },
@@ -20,7 +20,7 @@
         "id": 3,
         "forAlt": "Sass",
         "name": "SCSS",
-        "image": "/assets/image/Sass_Logo_Color.svg.png",
+        "image": "/assets/image/Sass_Logo_Color.svg.webp",
         "description": "Sass (Syntactically Awesome Stylesheets) est un préprocesseur CSS qui ajoute des fonctionnalités avancées comme les variables, les mixins, les boucles et l’imbrication. Il facilite l’organisation et la maintenance des styles.",
         "link": "https://sass-lang.com/"
       },
@@ -28,7 +28,7 @@
         "id": 4,
         "forAlt": "HTML5",
         "name": "HTML5",
-        "image": "/assets/image/HTML5_logo_and_wordmark.svg.png",
+        "image": "/assets/image/HTML5_logo_and_wordmark.svg.webp",
         "description": "HTML5 est la dernière version du langage HTML utilisé pour structurer le contenu des pages web. Il introduit de nouvelles balises sémantiques, des APIs puissantes et une meilleure prise en charge du multimédia.",
         "link": "https://developer.mozilla.org/fr/docs/Web/HTML"
       },
@@ -36,7 +36,7 @@
         "id": 5,
         "forAlt": "CSS3",
         "name": "CSS3",
-        "image": "/assets/image/CSS3_logo_and_wordmark.svg.png",
+        "image": "/assets/image/CSS3_logo_and_wordmark.svg.webp",
         "description": "CSS3 est la dernière version de CSS qui permet de styliser les pages web. Il introduit des fonctionnalités avancées comme les animations, les transitions, le flexbox et le grid.",
         "link": "https://developer.mozilla.org/fr/docs/Web/CSS"
       },
@@ -44,7 +44,7 @@
         "id": 6,
         "forAlt": "JavaScript",
         "name": "JavaScript",
-        "image": "/assets/image/Javascript-736400_960_720.png",
+        "image": "/assets/image/Javascript-736400_960_720.webp",
         "description": "JavaScript est un langage de programmation permettant d’ajouter des fonctionnalités interactives aux sites web. Il est exécuté côté client mais peut aussi être utilisé côté serveur avec Node.js.",
         "link": "https://developer.mozilla.org/fr/docs/Web/JavaScript"
       },
@@ -60,7 +60,7 @@
         "id": 8,
         "forAlt": "Swagger",
         "name": "Swagger",
-        "image": "/assets/image/Swagger-logo.png",
+        "image": "/assets/image/Swagger-logo.webp",
         "description": "Swagger est un outil de documentation et de test des API basé sur le format OpenAPI. Il permet de décrire, tester et générer automatiquement la documentation des API REST.",
         "link": "https://swagger.io/"
       }
@@ -68,41 +68,45 @@
     "projects": [
       {
         "id": 1,
+        "forDownloaded": "la maquette du projt Booki",
         "forAlt": "Projet 1",
         "description": "Booki est une intégration responsive d’une plateforme de réservation d’hébergements. Ce projet met en avant une interface utilisateur claire permettant aux visiteurs de rechercher un logement grâce à des filtres intuitifs. L’accent a été mis sur la structure HTML, la mise en page CSS et l’optimisation du site pour une navigation fluide sur tous les écrans.",
         "image": {
-          "icon": "/assets/maquettes/booki-icon.png",
-          "desktop": "/assets/maquettes/booki-desktop.png"
+          "icon": "/assets/maquettes/booki-icon.webp",
+          "desktop": "/assets/maquettes/booki-desktop.webp"
         },
         "link": "https://github.com/Mxmphyss/Booki.git"
       },
       {
         "id": 2,
+        "forDownloaded": "la maquette du projet Ohmyfood",
         "forAlt": "Projet 2",
         "description": "Ohmyfood est une intégration interactive d’un site de commande de repas en ligne. L’objectif était de concevoir une interface moderne et animée, mettant en valeur une sélection de restaurants et leurs menus. L’accent a été mis sur les animations CSS avancées, offrant une expérience immersive et dynamique aux utilisateurs.",
         "image": {
-          "icon": "/assets/maquettes/omf-icon.png",
-          "desktop": "/assets/maquettes/omf-desktop.png"
+          "icon": "/assets/maquettes/omf-icon.webp",
+          "desktop": "/assets/maquettes/omf-desktop.webp"
         },
         "link": "https://github.com/Mxmphyss/ohmyfood.git"
       },
       {
         "id": 3,
+        "forDownloaded": "la maquette du projet Kasa",
         "forAlt": "Projet 3",
         "description": "Kasa est une intégration web d’une application de location immobilière. L’objectif était de développer une interface épurée et réactive en React, permettant d’afficher dynamiquement les annonces de location. Une attention particulière a été portée à l’organisation des composants et à l’optimisation de la navigation pour une expérience utilisateur fluide et intuitive.",
         "image": {
-          "icon": "/assets/maquettes/kasa-icon.png",
-          "desktop": "/assets/maquettes/kasa-desktop.png"
+          "icon": "/assets/maquettes/kasa-icon.webp",
+          "desktop": "/assets/maquettes/kasa-desktop.webp"
         },
         "link": "https://github.com/Mxmphyss/Kasa-location.git"
       },
       {
         "id": 4,
+        "forDownloaded": "la maquette du projet Argent Bank",
         "forAlt": "Projet 4",
         "description": "Argent Bank est une intégration front-end d’une application bancaire en ligne. Ce projet inclut l’affichage du tableau de bord utilisateur, la gestion des comptes et des transactions via une API REST. Le site a été développé avec React et Redux pour assurer une gestion optimale de l’état et une navigation fluide, tout en respectant les bonnes pratiques de sécurité.",
         "image": {
-          "icon": "/assets/maquettes/argentBank-icon.png",
-          "desktop": "/assets/maquettes/argentBank-desktop.png"
+          "icon": "/assets/maquettes/argentBank-icon.webp",
+          "desktop": "/assets/maquettes/argentBank-desktop.webp"
         },
         "link": "https://github.com/Mxmphyss/P11-monApplicationBancaire-React.git"
       }
