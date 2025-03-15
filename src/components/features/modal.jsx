@@ -2,9 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from 'react';
 
 const Modal = ({ item, onClose, linkText }) => {
     if (!item) return null;
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+    
+        return () => {
+          document.body.style.overflow = "auto";
+        };
+      }, []);
 
     return (
         <motion.div className="modal-overlay" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
