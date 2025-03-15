@@ -8,12 +8,28 @@ const Modal = ({ item, onClose, linkText }) => {
     if (!item) return null;
 
     useEffect(() => {
+        const disableScroll = (e) => e.preventDefault();
+    
+        const scrollY = window.scrollY;
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.width = "100%";
+        document.body.style.height = "100%";
         document.body.style.overflow = "hidden";
     
+        document.addEventListener("touchmove", disableScroll, { passive: false });
+    
         return () => {
-          document.body.style.overflow = "auto";
+            document.body.style.position = "";
+            document.body.style.top = "";
+            document.body.style.width = "";
+            document.body.style.height = "";
+            document.body.style.overflow = "auto";
+            document.removeEventListener("touchmove", disableScroll);
+    
+            window.scrollTo(0, scrollY);
         };
-      }, []);
+    }, []);
 
     return (
         <motion.div className="modal-overlay" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
