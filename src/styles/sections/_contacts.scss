@@ -71,9 +71,13 @@
             }
 
             label {
-              display: none;
               color: $dark-nebula-gray;
-              font-size: 1rem;
+
+              p {
+                display: none;
+                font-size: 0.8rem;
+                color: $cosmic-gray;
+              }
             }
       
             input, textarea {

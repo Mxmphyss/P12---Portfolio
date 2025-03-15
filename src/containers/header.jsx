@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleUser, faHome, faProjectDiagram, faEnvelope, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { faCircleUser, faProjectDiagram, faEnvelope, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1100);
